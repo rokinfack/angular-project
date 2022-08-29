@@ -9,6 +9,8 @@ import { ProfilService } from './service/profile-modele.service';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SinglePictureComponent } from './single-picture/single-picture.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthentificationComponent } from './authentification/authentification.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,13 @@ import { SinglePictureComponent } from './single-picture/single-picture.componen
     ListProfilComponent,
     HeaderComponent,
     LandingPageComponent,
-    SinglePictureComponent
+    SinglePictureComponent,
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [ProfilService],

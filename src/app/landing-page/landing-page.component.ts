@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  myEmail!:FormGroup;
 
-  constructor() { }
+  constructor() {
+  
+   }
 
   ngOnInit(): void {
   }
+  onClick(form:NgForm){
+    console.log(form.value)
+  }
+
 
 }

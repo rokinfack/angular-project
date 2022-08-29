@@ -1,0 +1,18 @@
+<h1>Connectez-vous !</h1>
+<form  [formGroup]="myEmail">
+
+<div class="for-group">
+    <label for="name">vostre nom</label>
+    <input type="text" id="name" formControlName="firstname"/>
+    </div>
+    <div class="for-group">
+    <label for="lastName">vostre name</label>
+    <input type="text" id="lastName"  formControlName="lastName"/>
+    </div>
+    <div class="for-group">
+    <label for="age">vostre age</label>
+    <input type="number" id="age"  formControlName="age"/>
+    <button type="submit" (click)="onClick()">Enregistrer</button>
+    </div>
+</form>
+

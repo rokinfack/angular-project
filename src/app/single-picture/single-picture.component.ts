@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Profil } from '../données/donnee.modele';
 import { ProfilService } from '../service/profile-modele.service';
@@ -10,6 +11,7 @@ import { ProfilService } from '../service/profile-modele.service';
 })
 export class SinglePictureComponent implements OnInit {
   profile!:Profil;
+  myEmail!:FormGroup;
 
   constructor(private service:ProfilService,private route:ActivatedRoute) { }
 
@@ -18,4 +20,5 @@ export class SinglePictureComponent implements OnInit {
       this.profile=this.service.getProfilById(profilId)
   }
 
+ 
 }
